@@ -88,10 +88,9 @@ return (
           </div>
 
           <div>
-            <button onClick={onRegister} type="button" class="btn-success" style={{height:30, width:100, marginTop:10}}>Register</button>
-          </div>
-          <div>
-          <button onClick={onCancel} type="button" class="btn-danger" style={{height:30, width:100, marginTop:10 }}>cancel</button>
+            <button onClick={onRegister} type="button" class="btn-success" style={{height:30, width:100, marginTop:10, marginRight:5}}>Register</button>
+          
+          <button onClick={onCancel} type="button" class="btn-danger" style={{height:30, width:100, marginTop:10  }}>cancel</button>
           </div>
 
         </div>
