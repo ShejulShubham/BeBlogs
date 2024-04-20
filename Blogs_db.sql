@@ -14,6 +14,7 @@ userdate datetime default current_timestamp,
 primary key (userid)
 );
 
+userid, name, email, password, phone
 
 
 create table blog(
@@ -28,7 +29,9 @@ foreign key (userid) references user (userid),
 foreign key (catid) references category (catid)
 );
 
+blogid, blogtitle, cattitle, blogdate
 
+blogid ,blogtitle, cattitle, content, blodgdate
 
 create table category(
 catid int auto_increment,
@@ -36,4 +39,6 @@ cattitle varchar(30),
 description varchar(50),
 primary key (catid)
 );
+
+
 

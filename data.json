@@ -1,0 +1,111 @@
+1. user
+{
+"name": "shubham shejul",
+"email": "shejul@gmail.com",
+"password": "123",
+"phone": "987646578"
+}
+
+
+{
+"name": "anuj sharma",
+"email": "shrma@gmail.com",
+"password": "test",
+"phone": "5674839"
+}
+
+{
+"name": "elon musk",
+"email": "musk@gmail.com",
+"password": "what",
+"phone": "768494"
+}
+
+
+{
+"name": "",
+"email": "",
+"password": "",
+"phone": ""
+}
+name, email, password, phone
+
+2. blog
+{
+"blogtitle": "fashion wear",
+"content": "Dive into our content stand out.",
+"catid": 1,
+"userid": 1
+}
+
+{
+"blogtitle": "health",
+"content": "Trees enhance our lives flooding.",
+"catid": 2,
+"userid": 1
+}
+
+{
+"blogtitle": "lifestyle",
+"content": "Lifestyle content can include life",
+"catid": 3,
+"userid": 2
+}
+
+
+{
+"blogtitle": "craft",
+"content": "Craft blogs can generate crafts.",
+"catid": 4,
+"userid": 2
+}
+
+{
+"blogtitle": "",
+"content": "",
+"catid": 
+}
+
+
+blogtitle, content
+
+3. category
+
+{
+"cattitle": "fashion",
+"description": "Looking for greatest in fashion blogs?"
+}
+
+{
+"cattitle": "health",
+"description": "trees and green spaces overall health."
+}
+
+{
+"cattitle": "lifestyle",
+"description": "A lifestyle blog travel adventures."
+}
+
+{
+"cattitle": "craft",
+"description": "At Craft empowering and delightful"
+}
+
+{
+"cattitle": "beauty",
+"description": ""
+}
+
+
+
+{
+"cattitle": "food",
+"description": ""
+}
+
+{
+"cattitle": "",
+"description": ""
+}
+
+cattitle, description
