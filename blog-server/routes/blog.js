@@ -8,7 +8,7 @@ const router = express.Router()
 router.post('/search', (request, response) =>{
     const {title} = request.body
 
-    const statement = `select blogid ,blogtitle, cattitle, content, blodgdate form blog where blogtile = ?`
+    const statement = `select blogid, blogtitle, content, blogdate from blog where blogtitle = ?;`
 
     db.pool.query(statement, [title], (error, blog)=>{
         response.send(utils.createResult(error, blog))
@@ -17,28 +17,35 @@ router.post('/search', (request, response) =>{
 })
 
 
-// router.post('/create', (request, response) =>{
-//     const {}
-// })
+router.post('/create', (request, response) =>{
+    const {blogtitle, content, catid, userid} = request.body
 
-router.post('/view', (request, response)=>{
+    const statement = `insert into blog (blogtitle, content, catid, userid) values (?, ?, ?, ?);`
+
+    db.pool.execute(statement, [blogtitle, content, catid, userid], (error, result)=>{
+        response.send(utils.createResult(error, result))
+    })
+})
+
+router.get('/view', (request, response)=>{
     
-    const query = `select blodid, blogtitle, cattitle, blogdate from blog`
+    const query = `select * from blog`
 
     db.pool.query(query, (error, blogs)=>{
         response.send(utils.createResult(error, blogs))
     })
 })
 
-router.post('/category', (request, response)=>{
-    const {cattitle, description} = request.body
 
-    const statement = `insert into category (cattitle, description) values (?, ?)`
+// router.post('/category', (request, response)=>{
+//     const {cattitle, description} = request.body
 
-    db.pool.execute(statement, [cattitle, description], (error, result)=>{
-        response.send(utils.createResult(error, result))
-    })
-})
+//     const statement = `insert into category (cattitle, description) values (?, ?)`
+
+//     db.pool.execute(statement, [cattitle, description], (error, result)=>{
+//         response.send(utils.createResult(error, result))
+//     })
+// })
 
 
 module.exports = router

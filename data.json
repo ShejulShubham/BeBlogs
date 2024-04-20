@@ -37,6 +37,7 @@ name, email, password, phone
 "catid": 1,
 "userid": 1
 }
+blogtitle, content, catid, userid
 
 {
 "blogtitle": "health",
@@ -109,3 +110,6 @@ blogtitle, content
 }
 
 cattitle, description
+
+
+
