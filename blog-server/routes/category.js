@@ -19,7 +19,7 @@ router.post('/add', (request, response)=>{
 router.get('/viewall', (request, response)=>{
 
 
-    const statement = `select * from category`
+    const statement = `select catid, cattitle, description from category`
 
     db.pool.execute(statement, (error, result)=>{
         response.send(utils.createResult(error, result))

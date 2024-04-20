@@ -28,6 +28,20 @@ router.post('/create', (request, response) =>{
     })
 })
 
+
+router.post('/home', (request, response) =>{
+    const {title} = request.body
+
+    const statement = `select blogid, blogtitle, cattitle, blogdate from blog, category 
+    where blog.catid = category.catid;`
+
+    db.pool.query(statement, [title], (error, blog)=>{
+        response.send(utils.createResult(error, blog))
+    })
+    
+})
+
+
 router.get('/viewall', (request, response)=>{
     
     const query = `select blogtitle, content from blog`
