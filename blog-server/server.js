@@ -13,9 +13,11 @@ app.use(express.json())
 //routes
 const userRouter = require('./routes/user')
 const blogRouter = require('./routes/blog')
+const categoryRouter = require('./routes/category')
 
 app.use('/user', userRouter)
 app.use('/blog', blogRouter)
+app.use('/category', categoryRouter)
 
 
 
